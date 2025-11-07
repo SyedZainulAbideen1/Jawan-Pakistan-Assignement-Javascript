@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chapters 6–9 – Practice</title>
+</head>
+
+<body>
+    <h2>Chapters 6–9 – Math Expressions & User Input</h2>
+    <script>
+        // 1. Pre/Post Increment Example
+        var a = 2, b = 1;
+        var result = (--a) - (--b) + (++b) + (b--);
+        document.write("Result of (--a - --b + ++b + b--): " + result + "<br><br>");
+
+        // 2. Greeting by name
+        var name = prompt("Enter your name:");
+        alert("Hello " + (name || "Guest") + "!");
+
+        // 3. Multiplication Table
+        var num = prompt("Enter number for table:");
+        num = num == "" || num == null ? 5 : Number(num);
+        document.write("<b>Table of " + num + ":</b><br>");
+        for (var i = 1; i <= 10; i++) {
+            document.write(num + " x " + i + " = " + (num * i) + "<br>");
+        }
+
+        // 4. Subject marks and percentage
+        var s1 = prompt("Subject 1:");
+        var s2 = prompt("Subject 2:");
+        var s3 = prompt("Subject 3:");
+        var m1 = +prompt("Marks in " + s1 + ":");
+        var m2 = +prompt("Marks in " + s2 + ":");
+        var m3 = +prompt("Marks in " + s3 + ":");
+        var total = 300;
+        var obtained = m1 + m2 + m3;
+        var percent = (obtained / total) * 100;
+
+        document.write("<br><b>Result:</b><br>");
+        document.write(s1 + ": " + m1 + "/100<br>");
+        document.write(s2 + ": " + m2 + "/100<br>");
+        document.write(s3 + ": " + m3 + "/100<br>");
+        document.write("Total: " + obtained + "/300<br>");
+        document.write("Percentage: " + percent.toFixed(2) + "%");
+    </script>
+</body>
+
+</html>
