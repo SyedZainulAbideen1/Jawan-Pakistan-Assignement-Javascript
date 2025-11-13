@@ -1,0 +1,26 @@
+<!-- q4-fuel.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q4 - Fuel Check</title></head>
+<body>
+  <h2>Q4: Fuel Check</h2>
+  <button id="run">Enter Fuel</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const input = prompt('Enter remaining fuel (in litres):');
+      if (input === null) return;
+      const fuel = parseFloat(input.trim());
+      if (Number.isNaN(fuel)) {
+        alert('Please enter a valid number.');
+        return;
+      }
+      if (fuel < 0.25) {
+        alert('Please refill the fuel in your car');
+      } else {
+        alert('Fuel level is fine: ' + fuel + ' litres');
+      }
+    });
+  </script>
+</body>
+</html>

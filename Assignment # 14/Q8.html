@@ -1,0 +1,17 @@
+<!-- q8-div3.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q8 - Divisible by 3</title></head>
+<body>
+  <h2>Q8: Divisible by 3</h2>
+  <button id="run">Check</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const n = +prompt('Enter a number:');
+      if (n % 3 === 0) alert(n + ' is divisible by 3');
+      else alert(n + ' is not divisible by 3');
+    });
+  </script>
+</body>
+</html>

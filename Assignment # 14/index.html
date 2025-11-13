@@ -1,0 +1,24 @@
+<!-- q1-city.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q1 - City Welcome</title></head>
+<body>
+  <h2>Q1: City Welcome</h2>
+  <button id="run">Enter City</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const city = prompt('Enter city name:').trim();
+      if (!city) {
+        alert('No input given. Try again.');
+        return;
+      }
+      if (city.toLowerCase() === 'karachi') {
+        alert('Welcome to city of lights');
+      } else {
+        alert('Welcome to ' + city);
+      }
+    });
+  </script>
+</body>
+</html>

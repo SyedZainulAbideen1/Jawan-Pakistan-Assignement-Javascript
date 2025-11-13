@@ -1,0 +1,23 @@
+<!-- q7-guess.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q7 - Guess Game</title></head>
+<body>
+  <h2>Q7: Guess Game</h2>
+  <button id="play">Play</button>
+
+  <script>
+    document.getElementById('play').addEventListener('click', function () {
+      const secret = 7; // can be changed
+      const guess = +prompt('Guess the secret number (1-10):');
+      if (guess === secret) {
+        alert('Bingo! Correct answer');
+      } else if (guess + 1 === secret) {
+        alert('Close enough to the correct answer');
+      } else {
+        alert('Wrong guess. Try again.');
+      }
+    });
+  </script>
+</body>
+</html>

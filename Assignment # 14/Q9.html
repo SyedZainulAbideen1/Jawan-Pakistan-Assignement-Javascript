@@ -1,0 +1,17 @@
+<!-- q9-evenodd.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q9 - Even or Odd</title></head>
+<body>
+  <h2>Q9: Even or Odd</h2>
+  <button id="run">Check</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const n = +prompt('Enter a number:');
+      if (n % 2 === 0) alert(n + ' is even');
+      else alert(n + ' is odd');
+    });
+  </script>
+</body>
+</html>

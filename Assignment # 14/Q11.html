@@ -1,0 +1,30 @@
+<!-- q11-calculator.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q11 - Calculator</title></head>
+<body>
+  <h2>Q11: Simple Calculator</h2>
+  <button id="run">Start Calculator</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const a = +prompt('Enter first number:');
+      const b = +prompt('Enter second number:');
+      const op = prompt('Enter operation (+, -, *, /, %):');
+
+      if (op === '+') alert('Result: ' + (a + b));
+      else if (op === '-') alert('Result: ' + (a - b));
+      else if (op === '*') alert('Result: ' + (a * b));
+      else if (op === '/') {
+        if (b === 0) alert('Cannot divide by zero');
+        else alert('Result: ' + (a / b));
+      } else if (op === '%') {
+        if (b === 0) alert('Cannot modulo by zero');
+        else alert('Result: ' + (a % b));
+      } else {
+        alert('Invalid operator. Use +, -, *, /, or %.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- q6-grades.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q6 - Grade Calculator</title></head>
+<body>
+  <h2>Q6: Grade Calculator</h2>
+  <button id="run">Enter Marks</button>
+  <div id="result" style="white-space:pre-wrap;margin-top:10px;"></div>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const s1 = +prompt('Marks for Subject 1:');
+      const s2 = +prompt('Marks for Subject 2:');
+      const s3 = +prompt('Marks for Subject 3:');
+      const total = +prompt('Enter total marks:');
+      const obtained = s1 + s2 + s3;
+      const percentage = (obtained / total) * 100;
+
+      let grade, remarks;
+      if (percentage >= 80) { grade = 'A+'; remarks = 'Excellent'; }
+      else if (percentage >= 70) { grade = 'A'; remarks = 'Very Good'; }
+      else if (percentage >= 60) { grade = 'B'; remarks = 'Good'; }
+      else if (percentage >= 50) { grade = 'C'; remarks = 'Needs Improvement'; }
+      else if (percentage >= 40) { grade = 'D'; remarks = 'Work Hard'; }
+      else { grade = 'Fail'; remarks = 'Sorry'; }
+
+      document.getElementById('result').textContent =
+        `Total Marks: ${total}
+Marks Obtained: ${obtained}
+Percentage: ${percentage.toFixed(2)}%
+Grade: ${grade}
+Remarks: ${remarks}`;
+    });
+  </script>
+</body>
+</html>

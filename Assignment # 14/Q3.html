@@ -1,0 +1,26 @@
+<!-- q3-signal.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q3 - Traffic Signal</title></head>
+<body>
+  <h2>Q3: Traffic Signal</h2>
+  <button id="run">Enter Signal Color</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', function () {
+      const c = prompt('Enter signal color (red / yellow / green):');
+      if (!c) { alert('No input given.'); return; }
+      const color = c.trim().toLowerCase();
+      if (color === 'red') {
+        alert('Must Stop');
+      } else if (color === 'yellow') {
+        alert('Ready to move');
+      } else if (color === 'green') {
+        alert('Move now');
+      } else {
+        alert('Invalid color. Try red, yellow, or green.');
+      }
+    });
+  </script>
+</body>
+</html>
