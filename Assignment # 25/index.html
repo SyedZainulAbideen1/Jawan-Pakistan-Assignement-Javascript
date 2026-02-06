@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-tasks"></i> To-Do App</h1>
+      <p>Manage your tasks efficiently with CRUD & Firebase</p>
+    </header>
+    <div class="app-content">
+      <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter a new task...">
+        <button id="addTaskBtn"><i class="fas fa-plus"></i> Add Task</button>
+      </div>
+      <div class="error-message" id="errorMessage"></div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <div class="stats">
+        <div>Total: <span id="totalTasks">0</span></div>
+        <div>Pending: <span id="pendingTasks">0</span></div>
+        <div>Completed: <span id="completedTasks">0</span></div>
+      </div>
+      <ul id="tasksList"></ul>
+      <div class="empty-state" id="emptyState">
+        <i class="fas fa-clipboard-list"></i>
+        <h3>No tasks yet</h3>
+        <p>Add a task above</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Task</h2>
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+      </div>
+      <input type="text" id="editTaskInput" placeholder="Edit your task...">
+      <div class="error-message" id="editErrorMessage"></div>
+      <div class="modal-actions">
+        <button class="cancel-btn" id="cancelEditBtn">Cancel</button>
+        <button class="save-btn" id="saveEditBtn">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
